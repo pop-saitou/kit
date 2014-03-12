@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* =======================================================
+	ベース CSS
+======================================================= */
+body{
+	overflow-y: scroll; 
+	width:100%;
+}
+
+#content{
+	width:98%;
+	margin:0 auto;
+}
+
+h2{
+	font-size:22px;
+    border:solid 1px #ddd;
+    padding: 10px 5px;
+    border-radius: 5px;
+    background: #eee;
+    -moz-border-radius: 5px; /* FF */
+    background: -moz-linear-gradient(top,  #fff,  #eee); /* FF */
+    -webkit-border-radius: 5px;/* Webkit */
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#eee));/* Webkit */
+    -pie-background:linear-gradient(top,  #fff,  #eee); /* ie */
+    behavior: url(img/PIE.htc);  /* ie */
+	}
+	h2 span{border-left:5px #3cf solid;padding-left:10px;
+}
+
+.button {
+	display: inline-block;
+	width: 200px;
+	height: 54px;
+	text-align: center;
+	text-decoration: none;
+	line-height: 54px;
+	outline: none;
+    behavior: url(img/PIE.htc);  /* ie */
+}
+.button::before,
+.button::after {
+	position: absolute;
+	z-index: -1;
+	display: block;
+	content: '';
+}
+.button,
+.button::before,
+.button::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+}
+
+
+/* =======================================================
+	お問い合わせ CSS
+======================================================= */
+
+
+#inc table {
+	border-collapse: collapse;
+	width:100%;
+	margin:20px 0 50px;
+}
+#inc th.t_top {
+    border-top: #be1309 4px solid;
+}
+#inc th {
+	border-bottom: #e3e3e3 1px dotted;
+	border-left: #e3e3e3 1px dotted;
+	text-align: left;
+	padding: 10px;
+	font-weight: normal;
+}
+#inc td.t_top {
+	border-top: #b3b3b3 4px solid;
+}
+#inc td {
+	border-bottom: #e3e3e3 1px dotted;
+	border-right: #e3e3e3 1px dotted;
+	border-left: #e3e3e3 1px dotted;
+	text-align: left;
+	padding: 10px;
+}
+#inc tr:hover {
+    background: #f5f5f5;
+    color: #444;
+}

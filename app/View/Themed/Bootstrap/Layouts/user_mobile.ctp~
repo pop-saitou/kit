@@ -1,0 +1,161 @@
+<?php echo $this->Html->docType()?>
+<html>
+<head>
+	<?php echo $this->Html->charset(); ?>
+	<title>
+		<?php echo $title_for_layout; ?>
+	</title>
+<?php
+echo $this->Html->meta('icon');
+echo '<meta name="viewport" content="width=device-width,initial-scale=1.0"/>';
+echo $this->Html->css('bootstrap');
+echo $this->Html->css('user');
+echo $this->Html->script('jquery-1.9.1.min');
+echo $this->Html->script('bootstrap.min');
+echo $this->Html->script("jquery-ui.min");
+echo $this->Html->script("Common/action");
+echo $this->fetch('meta');
+echo $this->fetch('css');
+echo $this->fetch('script');
+?>
+</head>
+<body>
+<?php 
+echo $this->TB->navbar(
+				array(
+								"name"=>"グラコレ",
+								"url"=>array(
+												"controller"=>"user_tops",
+												"action"=>"index"
+								)
+				),
+				array(
+								array(
+												"linkName"=>"更新</br>情報",
+												"url"=>array(
+																"controller"=>"updates",
+																"action"=>"index"
+												),
+												"options"=>array(
+																"escape"=>false
+												)
+								),
+								array(
+												"linkName"=>"お問い合わせ",
+												"url"=>array(
+																"controller"=>"questions",
+																"action"=>"index"
+												),
+												"options"=>array(
+																"escape"=>false
+												)
+								),
+								array(
+												"linkName"=>"連携",
+												"url"=>array(
+																"controller"=>"combos",
+																"action"=>"index"
+												),
+												"options"=>array(
+																"escape"=>false
+												)	
+								),
+								array(
+												"linkName"=>"グランドスキル",
+												"url"=>array(
+																"controller"=>"grand_skills",
+																"action"=>"aboutGrandSkill"
+												)
+								),
+								array(
+												"linkName"=>"レート掲示板",
+												"url"=>array(
+																"controller"=>"posts",
+																"action"=>"index"
+												)
+								),
+								array(
+												"linkName"=>"トレード解禁一覧",
+												"url"=>array(
+																"controller"=>"trade_releases",
+																"action"=>"index"
+												)
+								),
+								array(
+												"linkName"=>"ヒルルク対象一覧",
+												"url"=>array(
+																"controller"=>"hirurukus",
+																"action"=>"index"
+												)
+								),
+								array(
+												"linkName"=>"用語集",
+												"url"=>array(
+																"controller"=>"glossaries",
+																"action"=>"index"
+												)
+								),
+								array(
+												"linkName"=>"検証",
+												"url"=>array(
+																"controller"=>"inspections",
+																"action"=>"index"
+												)
+								),
+								array(
+												"linkName"=>"冒険",
+												"url"=>array(
+																"controller"=>"adventures",
+																"action"=>"index"
+												)
+								),
+								array(
+												"linkName"=>"メモリアル",
+												"url"=>array(
+																"controller"=>"memorials",
+																"action"=>"index"
+												)
+								),
+								array(
+												"linkName"=>"フィギュア",
+												"url"=>array(
+																"controller"=>"figures",
+																"action"=>"index"
+												)
+								),
+								array(
+												"linkName"=>"イベント",
+												"url"=>array(
+																"controller"=>"events",
+																"action"=>"index"
+												)
+								),
+								array(
+												"linkName"=>"デッキシミュレータ",
+												"url"=>array(
+																"controller"=>"decks",
+																"action"=>"index"
+												)
+								),
+								array(
+												"linkName"=>"新規追加フィギュア",
+												"url"=>array(
+																"controller"=>"new_figures",
+																"action"=>"index"
+												)
+								)
+				)
+);
+?>
+	<div id="container">
+		<div id="content">
+			<div id="sub_content">
+			<?php echo $this->Session->flash(); ?>
+			<?php echo $this->fetch('content'); ?>
+			</div>
+		</div>
+		<div id="footer">
+		</div>
+	</div>
+</body>
+</html>
